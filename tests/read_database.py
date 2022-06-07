@@ -20,7 +20,7 @@ conn.load_extension("/workspaces/DynaMind-ToolBox/build/output/SqliteExtension/l
 # select all data from table wb_unit_flows
 # dm_vector_to_string(pervious_storage)
 
-c.execute("SELECT ogc_fid, dm_vector_to_string(soil_moisture) FROM wb_unit_flow")
+c.execute("SELECT pervious_runoff , dm_vector_to_string(pervious_runoff_daily) FROM wb_lot")
 rows = c.fetchall()
 for r in rows:
     print(r)
